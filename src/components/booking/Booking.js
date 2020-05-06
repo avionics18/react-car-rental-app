@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import {Redirect, Link} from 'react-router-dom';
+import {connect} from 'react-redux';
 
 class Booking extends Component {
 
@@ -212,4 +213,23 @@ class Booking extends Component {
 	}
 }
 
-export default Booking;
+
+
+
+const mapStateToProps = state => {
+	return {carToBook: {...state.book_car}}
+}
+
+const mapDispatchToProps = dispatch => {
+	return {
+		updateState: item => {
+			dispatch({
+				type: "UPD_CAR",
+				payload: {item}
+			})
+		}
+	}
+}
+
+
+export default connect(mapStateToProps, mapDispatchToProps)(Booking);

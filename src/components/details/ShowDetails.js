@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
+import {connect} from 'react-redux';
 
 
 
@@ -102,4 +103,20 @@ class ShowDetails extends Component {
 }
 
 
-export default ShowDetails;
+const mapStateToProps = state => {
+	return {eachCar: {...state.show_car}}
+}
+
+const mapDispatchToProps = dispatch => {
+	return {
+		bookCar: item => { 
+			dispatch({
+				type: "BOOK_CAR",
+				payload:{item}
+			})
+		}
+	}
+}
+
+
+export default connect(mapStateToProps, mapDispatchToProps)(ShowDetails);

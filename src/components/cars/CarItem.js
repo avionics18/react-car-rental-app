@@ -1,5 +1,6 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
+import {connect} from 'react-redux';
 
 function CarItem(props) {
 	return (
@@ -14,8 +15,8 @@ function CarItem(props) {
 					</p>
 					<p className="text-secondary">Rent/day: {props.eachCar.book_status?<span className="text-secondary">Rs. {props.eachCar.rent_day}</span>:<span className="text-primary">Rs. {props.eachCar.rent_day}</span>}</p>
 					<div>
-						{props.eachCar.book_status?<Link to="/" className="btn btn-secondary disabled mr-2">Book Now</Link>:<Link to="/booking" className="btn btn-dark mr-2" onClick={()=>props.bookCar(props.eachCar)}>Book Now</Link>}
-						<Link to="/details" className="btn btn-outline-dark" onClick={()=>props.showDetails(props.eachCar)}>Details</Link>
+						{props.eachCar.book_status?<Link to="/" className="btn btn-secondary disabled mr-2">Book Now</Link>:<Link to="/booking" className="btn btn-dark mr-2 book-btn" onClick={()=>props.bookCar(props.eachCar)}>Book Now</Link>}
+						<Link to="/details" className="btn btn-outline-dark details-btn" onClick={()=>props.showDetails(props.eachCar)}>Details</Link>
 					</div>
 				</div>
 			</div>
@@ -23,4 +24,22 @@ function CarItem(props) {
 	);
 }
 
-export default CarItem;
+
+const mapDispatchToProps = dispatch => {
+	return {
+		showDetails: item => {
+			dispatch({
+				type: "SHOW_CAR",
+				payload: { item }
+			});
+		},
+		bookCar: item => {
+			dispatch({
+				type: "BOOK_CAR",
+				payload: { item }
+			});
+		}
+	}
+}
+
+export default connect(null, mapDispatchToProps)(CarItem);

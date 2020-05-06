@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import CarItem from './CarItem';
+import {connect} from 'react-redux';
 
 class Cars extends Component {
 	render() {
@@ -10,7 +11,7 @@ class Cars extends Component {
 				<div className="row">
 					{this.props.carsArray.map(eachCar=>{
 						return (
-							<CarItem key={eachCar.id} eachCar={eachCar} showDetails={this.props.showDetails} bookCar={this.props.bookCar} />
+							<CarItem key={eachCar.id} eachCar={eachCar} />
 						)
 					})}
 				</div>
@@ -19,4 +20,10 @@ class Cars extends Component {
 	}
 }
 
-export default Cars;
+const mapStateToProps = state => {
+	return { carsArray: [...state.cars] }
+}
+
+
+
+export default connect(mapStateToProps, null)(Cars);
