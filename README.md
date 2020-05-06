@@ -2,7 +2,7 @@
 
 This project was created using `Create-React-App` .
 
-Live - [wonderful-shaw-a26d6d.netlify.app](https://wonderful-shaw-a26d6d.netlify.app/)
+Live Link - [wonderful-shaw-a26d6d.netlify.app](https://wonderful-shaw-a26d6d.netlify.app/)
 
 ## Versions
 
