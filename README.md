@@ -1,6 +1,8 @@
-# RENT VROOM - Car Rental App
+# RENT VROOM - Car Rental App [![Netlify Status](https://api.netlify.com/api/v1/badges/aa4188fd-bf80-4593-a4ae-5d7f6f89ebe3/deploy-status)](https://app.netlify.com/sites/wonderful-shaw-a26d6d/deploys)
 
 This project was created using `Create-React-App` .
+
+Live - [wonderful-shaw-a26d6d.netlify.app](https://wonderful-shaw-a26d6d.netlify.app/)
 
 ## Versions
 
