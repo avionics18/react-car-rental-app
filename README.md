@@ -1,4 +1,12 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# RENT VROOM - Car Rental App
+
+This project was created using `Create-React-App` .
+
+## Versions
+
+v2.0 - Only used React to create the app.
+
+
 
 ## Available Scripts
 
