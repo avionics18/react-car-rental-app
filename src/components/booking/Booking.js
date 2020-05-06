@@ -77,6 +77,24 @@ class Booking extends Component {
 				}
 			}
 		}
+		// (iyy>year)
+		else{
+			if(ryy<iyy){
+				console.log("Issue Date Passed the test. It is valid. else");
+				flag=2;
+			}
+			if(ryy===iyy){
+				if(rmm<imm){
+					flag=2;
+				}
+				else if(rmm===imm && rdd<=idd){
+					flag=2;
+				}
+				else{
+					console.log("Return Date Passed the test. It is valid. else");
+				}
+			}
+		}
 		
 
 		console.log("return", flag);
