@@ -7,6 +7,7 @@ Live Link - [wonderful-shaw-a26d6d.netlify.app](https://wonderful-shaw-a26d6d.ne
 ## Versions
 
 v2.1 - Implemented Redux for efficient state management.
+
 v2.0 - Only used React to create the app.
 
 
