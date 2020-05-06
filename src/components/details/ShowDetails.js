@@ -71,10 +71,26 @@ class ShowDetails extends Component {
 								<div className="col-12">
 									<h4>Current Booking</h4>
 									<hr/>
-									<p className="text-secondary">Name: <span className="text-dark font-weight-bold">{this.props.eachCar.userDetails.name}</span></p>
-									<p className="text-secondary">Phone No.: <span className="text-dark font-weight-bold">{this.props.eachCar.userDetails.phoneNo}</span></p>
-									<p className="text-secondary">Issue Date: <span className="text-dark font-weight-bold">{this.formatDate(this.props.eachCar.userDetails.issueDate)}</span></p>
-									<p className="text-secondary">Return Date: <span className="text-dark font-weight-bold">{this.formatDate(this.props.eachCar.userDetails.returnDate)}</span></p>
+									<div className="table-responsive-sm">
+										<table className="table table-striped">
+											<thead>
+												<tr>
+													<th>Name</th>
+													<th>Phone No.</th>
+													<th>Issue Date</th>
+													<th>Return Date</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>{this.props.eachCar.userDetails.name}</td>
+													<td>{this.props.eachCar.userDetails.phoneNo}</td>
+													<td>{this.formatDate(this.props.eachCar.userDetails.issueDate)}</td>
+													<td>{this.formatDate(this.props.eachCar.userDetails.returnDate)}</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
 								</div>
 							</div>
 						) : null
