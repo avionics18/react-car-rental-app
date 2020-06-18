@@ -39,5 +39,13 @@
   "devDependencies": {
     "redux-devtools-extension": "^2.13.8",
     "redux-logger": "^3.0.6"
-  }
+  },
+  "keywords": [
+    "react",
+    "app",
+    "react project",
+    "car rental app",
+    "redux"
+  ],
+  "description": "Create React App Project"
 }
